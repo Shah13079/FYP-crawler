@@ -20,6 +20,8 @@ headers = {
 
 #Sending email on conformation
 def sending_task_confirmation_mail(user_id,mail_subject_is,task_id,current_site,SPages,total_products,section):
+
+
     if total_products != None and SPages==None:
         pages_nd_products='Products'
         total=total_products
@@ -58,12 +60,28 @@ def sending_task_confirmation_mail(user_id,mail_subject_is,task_id,current_site,
 
 #Scrape Ebay products  by Urls
 def f_scrape_ebay_by_products(products_urls,current_user,task_id,current_site):
+    headers = {"X-Crawlera-Region" : "US",
+
+                'user-agent': 'Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36',
+               
+                }
+    
+    proxy_host = "proxy.zyte.com"
+    proxy_port = "8011"
+    proxy_auth = "6e5fa123c7e74c04871a2661ffb87ab8:" # Make sure to include ':' at the end
+    proxies = {"https": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port),
+        "http": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port)}
+
+
+
   
     Logs={}
     total_products_scraped=0
     for each in products_urls:
         try:
-            responser=requests.get(each,headers=headers)
+            responser=requests.get(each,proxies=proxies,
+                            verify=path.join(path.join(getcwd(),"accounts"),"zyte-proxy-ca.crt") ,)
+                            
             print("status is:",responser.status_code)
             if 'Looks like this page is missing. If you still need help' in responser.text:
                 pass
