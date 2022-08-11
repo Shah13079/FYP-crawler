@@ -97,32 +97,32 @@ AUTH_USER_MODEL='accounts.Account'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
-
 # DATABASES = {
-
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-#         'NAME': 'd2t4ui4r4fqb9',
-
-#         'USER': 'jtykxnycptqsyg',
-                        
-#         'PASSWORD': '2ef8e215b0ea78435a6b3f7dfa42e7bf93c5ebca3a09d36bd1074a189608ef97',
-
-#         'HOST': 'ec2-54-208-139-247.compute-1.amazonaws.com',
-
-#         'PORT': '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
-
 # }
+
+
+
+DATABASES = {
+
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'd2t4ui4r4fqb9',
+
+        'USER': 'jtykxnycptqsyg',
+                        
+        'PASSWORD': '2ef8e215b0ea78435a6b3f7dfa42e7bf93c5ebca3a09d36bd1074a189608ef97',
+
+        'HOST': 'ec2-54-208-139-247.compute-1.amazonaws.com',
+
+        'PORT': '5432',
+    }
+
+}
 
 
 import dj_database_url
