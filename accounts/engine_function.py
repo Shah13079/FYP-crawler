@@ -74,14 +74,13 @@ def f_scrape_ebay_by_products(products_urls,current_user,task_id,current_site):
 
 
 
-  
     Logs={}
     total_products_scraped=0
     for each in products_urls:
         try:
             responser=requests.get(each,proxies=proxies,
                             verify=path.join(path.join(getcwd(),"accounts"),"zyte-proxy-ca.crt") ,)
-                            
+
             print("status is:",responser.status_code)
             if 'Looks like this page is missing. If you still need help' in responser.text:
                 pass
