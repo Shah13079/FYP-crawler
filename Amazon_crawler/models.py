@@ -14,8 +14,8 @@ class EbayByProduct(models.Model):
     TaskId=models.UUIDField(null=False)
     Account=models.ForeignKey(Account,on_delete=models.CASCADE,related_name='UserAccount',null=False)
     
-    # def __str__(self) -> str:
-    #     return self.title
+    def __str__(self) -> str:
+        return self.title or ""
 
     class Meta:
         ordering=['title', 'price']
@@ -33,8 +33,8 @@ class AmazonByProduct(models.Model):
     account=models.ForeignKey(Account,on_delete=models.CASCADE,related_name='user_account_id',null=False)
     
 
-    # def __str__(self) -> str:
-    #     return self.title
+    def __str__(self) -> str:
+        return self.title or ""
 
     class Meta:
         ordering=['title', 'price']
