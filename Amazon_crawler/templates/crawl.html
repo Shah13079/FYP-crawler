@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+        <h1>Our tools and services</h1>
+        <br>
+        <br>
+
+
+        <div class="row d-flex justify-content-center" >
+                <div class="col-sm-4">
+                  <div class="card" style="background-color:lightgray;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>Amazon by Products</b></h5>
+                      <p class="card-text">This tool help to crawl amazon listings by direct Urls in bulk without any limitation.</p>
+                      <a href="{% url 'Amazon_crawler:ABP' %}" class="btn btn-primary">Go to tool</a>
+                    </div>
+                  </div>
+                </div>
+
+                
+        </div>
+        <br><br>
+        <div class="row d-flex justify-content-center">
+               <div class="col-sm-4" >
+                  <div class="card" style="background-color:lightgray;">
+                    <div class="card-body">
+                      <h5 class="card-title">Ebay by Products</h5>
+                      <p class="card-text">This tool help to crawl Ebay listings by direct Urls in bulk without any limitation.</p>
+                      <a href="{% url 'Amazon_crawler:EBP' %}" class="btn btn-primary">Go to tool</a>
+                    </div>
+                  </div>
+                </div>
+               
+        </div>
+
+
+        
+        
+
+{% endblock %}
+
+  

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <h1> Scrape Amazon Products by Direct listings Urls </h1>
+        <h3 class="Ptext"> Paste the Links in below box per URL per line  </h3>
+
+    <div>
+      <form  method="POST">
+          {% csrf_token %}
+
+        <div class="justified" >
+              <textarea  rows = "5" cols = "80" id="myurl" data-override='content' name = "ABP" placeholder="Please Paste Amazon products Urls (Single or bulk)" ></textarea>
+        </div>
+
+        <br>
+        <br>
+       
+        <div class="justified " > 
+          <button class='buttonforsub' id="btn" type="submit"  value="submit" >
+      
+              <p id="btnText">Submit</p>
+              <div class="check-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                      <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                  </svg>
+              </div>
+          </button>
+          </div>    
+    </form>
+    </div>
+
+{% endblock %}

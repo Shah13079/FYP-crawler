@@ -1,0 +1,14 @@
+{% autoescape off %}
+
+Hi {{user.first_name}},
+
+
+    Your Job has been completed successfully !
+    Job logs:
+
+    scraped count:  {{count}} - type: {{type}}
+    task_id      :  {{task_id}}
+    download by  :  {{download_link}}
+    
+
+{% endautoescape %}

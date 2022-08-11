@@ -1,0 +1,112 @@
+
+
+
+
+h1 { text-align: center ;color: #0f0e04; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0; }
+
+
+h3 { text-align: center ;color: black; font-family: 'Droid serif', serif; font-size: 25px; font-weight: 300; font-style: italic; line-height: 44px; margin: 0 0 12px; text-align: center; }
+
+
+
+
+.justified {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.buttonforsub{
+    width: 270px;
+    height: 80px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.check-box{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+.check-box svg{
+    width: 40px;
+    margin: 20px;
+}
+
+svg path{
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.activee{
+    background: #ff2b75;
+    transition: 1s;
+}
+
+.activee .check-box{
+    right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
+.activee p{
+    margin-right: 125px;
+    transition: 1s;
+}
+
+.activee svg path{
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+
+.scrollit{
+ 
+  width: 900px;
+   height: 500px; 
+   line-height: 3em; 
+   overflow:scroll;
+    border: thin #000 solid; 
+    padding: 5px
+  
+  }
+
+
+
+
+
+  
+
+
+  

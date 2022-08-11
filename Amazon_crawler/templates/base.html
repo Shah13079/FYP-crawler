@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="max-age=604800" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>ParseJet | fast data crawler from ecommerce websites</title>
+
+<link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+
+
+
+<!-- jQuery -->
+<script src="{% static 'js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
+
+<!-- Bootstrap4 files-->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript"></script> 
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+
+<!-- Font awesome 5 -->
+<link href="{% static 'fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
+
+<!-- custom style -->
+<link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+
+<link href="{% static 'css/custom.css' %}" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- custom javascript -->
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}" type="text/javascript"></script>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<!-- PayPal Script -->
+<script src="https://www.paypal.com/sdk/js?client-id=AVBSMqNtoZ1IUO6lrSe6-vm9AIV1ZKN8CgXu_nINRs80xELRs650mh3yR62groIUg-GCe59Od_EFOG6O&currency=USD"></script>
+
+<script type="text/javascript">
+/// some script
+
+// jquery ready start
+$(document).ready(function() {
+	// jQuery code
+
+});
+// jquery end
+</script>
+
+
+<style>
+
+.buttonforsub{
+  width: 270px;
+  height: 80px;
+  border: none;
+  outline: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+h1 { text-align: center ;color: #0f0e04;
+   font-family: 'Trocchi', serif; font-size: 45px;
+    font-weight: normal; line-height: 48px; margin: 0; }
+
+h3 { text-align: center ;color: black; 
+  font-family: 'Droid serif', serif; font-size: 25px; font-weight: 300; 
+  font-style: italic; line-height: 44px; margin: 0 0 12px; 
+  text-align: center; }
+
+
+.justified {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.check-box{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- navbar -->
+  {% include 'includes/navbar.html' %}
+
+
+  {% block content %}
+
+  <!-- content -->
+  {% endblock %}
+
+
+  {% if UrlError %}
+  <div>{% include 'includes/alerts.html' %}</div>
+  {% elif Entities %}
+  <div>{% include 'includes/alerts.html' %}</div>
+  
+  {% endif %}
+  
+<br><br>
+
+<!-- footer -->
+{% include 'includes/footer.html' %}
+
+
+<script type="text/javascript">
+  const btn = document.querySelector("#btn");
+  const btnText = document.querySelector("#btnText");
+
+  btn.onclick = () => {
+    btnText.innerHTML = "Thanks";
+    btn.classList.add("activee");
+  };
+</script>
+
+</body></head></html>
