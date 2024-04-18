@@ -1,6 +1,6 @@
 # FYP
 
-I am Shah hussain, software engineer. And this is my Final Year Project. The aim of this project was to create a web application that scrape data from Amazon and ebay for analysis
+I am Shah hussain, software engineer. The aim of this project was to create a web application that scrape data from Amazon and ebay for analysis
 The application is web based that's why it could be access from anywher without hassles of creating custom scripts, installing liabriris, running commands and manual maintainance . 
 
 How to Use it as Web Version:
