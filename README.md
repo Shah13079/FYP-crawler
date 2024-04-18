@@ -20,8 +20,9 @@ This project could be run locall by Simpy installing all required Dependecies by
 2) Open CMD and change working directory into project directory
 2)"<pip install -r requirements.tx>"
 3) python manage.py runserver
+4) Run Celery on another CMD window for running the background jobs.
+5) submit urls of products and wait, once completed download csv file
 
-Thats all! thanks
 
 Regards
 Eng Hussain
