@@ -39,9 +39,6 @@ class Registration(ModelForm):
                 "password does not match!"
             )
     
-        
-        
-
 class Profile_update(forms.ModelForm):
     first_name = forms.CharField(required=False)
     last_name = forms.CharField(required=False) 

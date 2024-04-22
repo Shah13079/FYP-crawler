@@ -3,12 +3,11 @@ from django.conf import settings
 import os
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE',"Crawler.settings")
-app = Celery('Crawler')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',"crawler.settings")
+app = Celery('crawler')
 app.conf.enable_utc=False
 app.conf.update(timezone="Asia/Karachi")
 
-#   should have a `CELERY_` prefix.
 
 app.config_from_object(settings, namespace='CELERY')
 

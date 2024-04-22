@@ -1,32 +1,41 @@
-# FYP
+# Project Overview
 
-The aim of this project was to create a web application that scrape data from Amazon and ebay for market analysis
-The application is web based that's why it could be access from anywher without hassles of creating custom scripts, installing liabriris, running commands and manual maintainance . 
+The aim of this project is to develop a web application designed to scrape data from Amazon and eBay for comprehensive market analysis. The web-based nature of the application ensures accessibility from anywhere, eliminating the need for custom scripts, library installations, command executions, and manual maintenance.
 
-How to Use it as Web Version:
-1) Visit  http://www.parsejet.com 
-2) Sign Up / Login
-3) Choose tool want to use  ( Scrape Amazon direct Products Urls, OR scrape Ebay Direct Product Url, Comparison tools
-    between these two market places.
-4) Input data source, wait, once job complated
-5) Download Data
+---
 
+## Web Version Usage
 
+1. **Visit** [ParseJet](http://www.parsejet.com).
+2. **Sign Up/Login** to access the platform.
+3. **Select** the desired tool:
+    - Scrape Amazon Direct Product URLs
+    - Scrape eBay Direct Product URLs
+    - Comparison tools between Amazon and eBay marketplaces
+4. **Input** the data source and await completion of the job.
+5. **Download** the generated data.
 
-OR
+---
 
-This project could be run locall by Simpy installing all required Dependecies by command:
-1) Install python
-2) Open CMD and change working directory into project directory
-2)"<pip install -r requirements.tx>"
-3) python manage.py runserver
-4) Run Celery on another CMD window for running the background jobs.
-5) submit urls of products and wait, once completed download csv file
+## Local Setup Instructions
 
+1. **Install Python** on your machine.
+2. **Open** Command Prompt and navigate to the project directory.
+3. **Install** the required dependencies using the following command:
+    ```
+    pip install -r requirements.txt
+    ```
+4. **Start** the Django server with the command:
+    ```
+    python manage.py runserver
+    ```
+5. **Run** Celery-Redis on Windows to handle background jobs:
+    ```
+    celery -A Crawler.cele worker --pool=solo -l info
+    ```
+6. **Submit** the product URLs, and upon completion, you will receive an email with a link to download the generated CSV file.
 
-Regards
+---
+
+**Regards,**  
 Eng Hussain
-
-
-
-
