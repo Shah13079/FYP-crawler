@@ -31,7 +31,7 @@ The aim of this project is to develop a web application designed to scrape data 
     ```
 5. **Run** Celery-Redis on Windows to handle background jobs:
     ```
-    celery -A Crawler.cele worker --pool=solo -l info
+    celery -A crawler.cele worker --pool=solo -l info
     ```
 6. **Submit** the product URLs, and upon completion, you will receive an email with a link to download the generated CSV file.
 
